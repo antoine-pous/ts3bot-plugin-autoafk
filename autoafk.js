@@ -56,7 +56,7 @@ exports = module.exports = function(TS3Bot) {
         }
 
         // If the delay is exceeded
-        if(pluginConfig.output_delay >) {
+        if(pluginConfig.output_delay > 0) {
           AFKList.push(client.clid)
         }
         continue
@@ -122,7 +122,7 @@ exports = module.exports = function(TS3Bot) {
           TS3Bot.log.error('plugin - autoafk', '[', err.id, '] ', err.msg)
         }
       })
-      
+
     }
 
   })

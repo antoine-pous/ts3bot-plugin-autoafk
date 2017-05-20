@@ -1,18 +1,30 @@
 {
-  "max_idle_time": "Time in minutes, set it to 0 to disable it",
-  "max_idle_time": 60,
-  "protected_servergroups": "Array of protected servergroups",
+  "protected_servergroups": "Array of protected servergroups (sgid)",
   "protected_servergroups": [],
-  "protected_clients": "Array of protected clients, use client_database_id!",
+  "protected_channels": "Array of protected channels (cid)",
+  "protected_channels": [],
+  "protected_clients": "Array of protected clients (cldbid)",
   "protected_clients": [],
-  "action": "must be move or kick",
-  "action": "move",
-  "target_cid": "The channel id (cid)",
-  "target_cid": 10,
-  "reason": "If not empty, send private message to the user. If kick mode is enabled the message is the reason kick",
-  "reason": "It seem you're AFK since 60 minutes, to preserve bandwitch we moved you in the AFK channel",
-  "output_muted": "If set to true the action is performed while the client mute teamspeak",
-  "output_muted": false,
-  "output_delay": "If the output client is muted you can delay the action, this delay is in minutes",
-  "output_delay": 0
+
+  "max_idle_move": "Duration in minutes, set it to 0 to disable it",
+  "max_idle_move": 0,
+  "max_idle_kick": "Duration in minutes, set it to 0 ti disable it",
+  "max_idle_kick": 0,
+
+  "target_cid": "The channel id (cid) where AFK clients are moved",
+  "target_cid": 0,
+  "target_cpw": "The channel password where AFK clients are moved",
+  "target_cpw": "",
+
+  "reason_kick": "Give this reason when AFK clients are kick from the server",
+  "reason_kick": "",
+  "reason_idle": "If not empty, send private message to the client when idle time id exceeded, if kick mode is enabled the message is the reason kick",
+  "reason_idle": "",
+  "reason_muted": "If not empty, send a message when the client mute his output",
+  "reason_muted": "",
+
+  "headset_muted": "If set to true the action is performed while the client mute teamspeak",
+  "headset_muted": false,
+  "headset_muted_delay": "Delay in minutes before move clients who's muted their output",
+  "headset_muted_delay": 0
 }

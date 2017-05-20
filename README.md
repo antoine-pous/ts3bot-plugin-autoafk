@@ -5,8 +5,9 @@ This plugin is designed to perform an action when clients reach the maximum idle
 ```console
 $ npm install ts3bot-plugin-autoafk --save
 ```
+**Note:** You should run the command from the [node-teamspeak3-bot](https://github.com/antoine-pous/node-teamspeak3-bot) root directory
 
-## configuration
+## Configuration
 The configuration provide some parameters to wich allow you to personalize and adapt this feature to your requirements.
 
 | Parameter | Type | Default | Description |
@@ -18,7 +19,6 @@ The configuration provide some parameters to wich allow you to personalize and a
 | target_cid | [Number](mdn-number) | 0 | Channel id where are moved idle clients
 | output_muted | [Boolean](mdn-boolean) | false | Perform action when the user mute his output
 | output_delay | [Number](mdn-number) | 60 | Delay in seconds before performing action when the client output is muted
-
 
 [mdn-boolean]: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
 [mdn-array]: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)

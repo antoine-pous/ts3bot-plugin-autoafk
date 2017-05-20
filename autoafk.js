@@ -55,11 +55,12 @@ exports = module.exports = function(TS3Bot) {
           TS3Bot.setClientData(client, 'output_muted_since', new Date())
         }
 
-        // If the delay is exceeded
-        if(pluginConfig.output_delay > 0) {
+        // If the delay is disabled or exceeded
+        if(pluginConfig.output_delay === 0) {
           AFKList.push(client.clid)
+          continue
         }
-        continue
+
       } else {
         TS3Bot.delClientData('output_muted_since')
       }

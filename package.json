@@ -1,0 +1,20 @@
+{
+  "name": "ts3bot-plugin-autoafk",
+  "version": "1.0.0",
+  "description": "TeamSpeak3 bot move automaticly AFK users to the specified channel",
+  "main": "autoafk.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoine-pous/ts3bot-plugin-autoafk"
+  },
+  "bugs": {
+    "url": "https://github.com/antoine-pous/ts3bot-plugin-autoafk/issues"
+  },
+  "author": "Antoine Pous",
+  "license": "ISC",
+  "ts3botpm": {
+    "compatibility": "1.0.0",
+    "index": true
+  },
+  "dependencies": {}
+}

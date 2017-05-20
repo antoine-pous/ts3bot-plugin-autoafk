@@ -44,11 +44,11 @@ exports = module.exports = function(TS3Bot) {
         continue
       }
 
+      // Get the output_muted_timestamp
+      let output_muted_since = TS3Bot.getClientData(client, 'output_muted_since')
+
       // If the client should be moved when headset is muted
       if(pluginConfig.output_muted === true && client.client_output_muted === 1) {
-
-        // Get the output_muted_timestamp
-        let output_muted_since = TS3Bot.getClientData(client, 'output_muted_since')
 
         // If we haven't timestamp stored
         if(!output_muted_since) {
@@ -62,7 +62,11 @@ exports = module.exports = function(TS3Bot) {
         }
 
       } else {
-        TS3Bot.delClientData('output_muted_since')
+
+        if(output_muted_since !== null) {
+          TS3Bot.delClientData('output_muted_since')
+        }
+
       }
 
       // If the client should be moved when he's exceed max idle time

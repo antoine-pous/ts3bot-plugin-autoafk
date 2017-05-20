@@ -1,0 +1,1 @@
+# ts3bot-plugin-autoafk
